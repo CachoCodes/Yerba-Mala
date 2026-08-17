@@ -1,0 +1,12 @@
+# Blender 5.1.2 MTL File: 'PSX_Forest_Asset_Pack_File.blend'
+# www.blender.org
+
+newmtl Bush_1
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+illum 2
+map_Kd C:/Users/Jakub/Desktop/PSX Forest Asset Pack/Textures/Bush_texture_1.png
+map_d C:/Users/Jakub/Desktop/PSX Forest Asset Pack/Textures/Bush_texture_1.png

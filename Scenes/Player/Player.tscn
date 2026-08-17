@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://b36u7tdingxbn"]
+
+[ext_resource type="Script" uid="uid://mudfn1oj6fx5" path="res://Scenes/Player/player.gd" id="1_h54ih"]
+[ext_resource type="PackedScene" uid="uid://c5v3fh0godtev" path="res://Characters/Manusos/Main/character_06.tscn" id="2_h54ih"]
+[ext_resource type="Shader" uid="uid://1hcdkbw03ta6" path="res://Shaders/PS1_camera.gdshader" id="3_jmcll"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iwpo4"]
+render_priority = 0
+shader = ExtResource("3_jmcll")
+shader_parameter/enable_fog = true
+shader_parameter/fog_color = Color(0.5092862, 0.50928617, 0.5092862, 1)
+shader_parameter/noise_color = Color(0, 0, 0, 1)
+shader_parameter/fog_distance = 100.0
+shader_parameter/fog_fade_range = 70.0000032775
+shader_parameter/enable_noise = true
+shader_parameter/noise_time_fac = 4.0
+shader_parameter/enable_color_limitation = true
+shader_parameter/color_levels = 128
+shader_parameter/enable_dithering = true
+shader_parameter/dither_strength = 0.70000003325
+
+[sub_resource type="QuadMesh" id="QuadMesh_rt77u"]
+material = SubResource("ShaderMaterial_iwpo4")
+size = Vector2(2, 2)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lehvl"]
+radius = 0.6660156
+height = 4.52417
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1199056655]
+script = ExtResource("1_h54ih")
+
+[node name="Character_06" parent="." unique_id=1056854997 instance=ExtResource("2_h54ih")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1067061545]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 4.10372, 0.60666186)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D" unique_id=2123612921]
+transform = Transform3D(1.2112571, 0, 0, 0, 0.68701094, 0, 0, 0, 1.5271139, 0, 0, -0.43670937)
+mesh = SubResource("QuadMesh_rt77u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1172572040]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2574463, 0)
+shape = SubResource("CapsuleShape3D_lehvl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=813613546]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=2027742521]
+offset_right = 40.0
+offset_bottom = 40.0

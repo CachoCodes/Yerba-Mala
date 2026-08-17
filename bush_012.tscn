@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cti01fcvkcbbm"]
+
+[ext_resource type="PackedScene" uid="uid://du2yttgknsv32" path="res://Materials/bush_01.blend" id="1_20xtt"]
+
+[node name="bush_012" unique_id=826405218 instance=ExtResource("1_20xtt")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="bush_01" parent="." index="0" unique_id=1759283160]
+transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0, 0, 0)
